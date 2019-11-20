@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="SqlSmartCopyPaste.911321e2-a77f-475a-85e3-a24aeb745ba1" Version="1.0" Language="en-US" Publisher="Huber, Brett" />
+        <Identity Id="SqlSmartCopyPaste.911321e2-a77f-475a-85e3-a24aeb745ba1" Version="1.1" Language="en-US" Publisher="Huber, Brett" />
         <DisplayName>Sql Smart Paste</DisplayName>
         <Description xml:space="preserve">Paste coppied items as formatted ready to use SQL expressions. </Description>
     </Metadata>
