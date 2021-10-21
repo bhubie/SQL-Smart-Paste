@@ -353,3 +353,5 @@ MigrationBackup/
 .ionide/
 
 node_modules
+
+AzureDataStudio/out

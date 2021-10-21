@@ -12,21 +12,35 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:sql-smart-paste.helloWorld",
-		"onCommand:sql-smart-paste.showCurrentConnection"
+		"onCommand:sql-smart-paste.pasteascsv",
+		"onCommand:sql-smart-paste.pasteasvarcharcsv"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "sql-smart-paste.helloWorld",
-				"title": "Hello World"
+				"key": "ctrl+d+v",
+				"command": "sql-smart-paste.pasteascsv",
+				"title": "Paste as CSV"
 			},
 			{
-				"command": "sql-smart-paste.showCurrentConnection",
-				"title": "Show Current Connection"
+				"key": "ctrl+f+v",
+				"command": "sql-smart-paste.pasteasvarcharcsv",
+				"title": "Paste as VarChar CSV"
 			}
-		]
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "sql-smart-paste.pasteascsv",
+					"group": "YourGroup@1"
+		  		},
+				{
+					"command": "sql-smart-paste.pasteasvarcharcsv",
+					"group": "YourGroup@2"
+		  		}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
