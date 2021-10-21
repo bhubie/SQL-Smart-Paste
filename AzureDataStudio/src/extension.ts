@@ -24,11 +24,12 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.window.showInformationMessage('Hello World!');
     }));
 
-    context.subscriptions.push(vscode.commands.registerCommand('sql-smart-paste.pasteasvarcharcsv', () => {
+    context.subscriptions.push(vscode.commands.registerCommand('sql-smart-paste.pasteasvarcharcsv', async () => {
         // The code you place here will be executed every time your command is executed
 
+        let clipboardContent = await vscode.env.clipboard.readText(); 
         // Display a message box to the user
-        vscode.window.showInformationMessage('Hello World!');
+        vscode.window.showInformationMessage(clipboardContent);
     }));
 }
 
