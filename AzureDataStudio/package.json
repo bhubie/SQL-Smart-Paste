@@ -1,0 +1,54 @@
+{
+	"name": "sql-smart-paste",
+	"displayName": "SQL-Smart-Paste",
+	"description": "extension for pasting copied items as properly formatted ready to use SQL expressions",
+	"publisher": "Brett Huber",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.39.0",
+		"azdata": "*"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:sql-smart-paste.helloWorld",
+		"onCommand:sql-smart-paste.showCurrentConnection"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "sql-smart-paste.helloWorld",
+				"title": "Hello World"
+			},
+			{
+				"command": "sql-smart-paste.showCurrentConnection",
+				"title": "Show Current Connection"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js",
+		"proposedapi": "node installTypings.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.39.0",
+		"@types/azdata": "*",
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.0",
+		"typescript": "^4.3.5",
+		"azdata-test": "^1.x"
+	}
+}
