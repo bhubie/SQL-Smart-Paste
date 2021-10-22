@@ -12,27 +12,17 @@ function isAllTextNumeric(text: string[]): boolean {
 
 function joinText(text: string[], isTextAllNumeric: boolean): string {
     
-    let joinedText: string = '';
-
-    text.forEach((el, index, arr) => {
-        // Properly Escape apostrophes
+    return text.map((el) => {
+        // Properly escape apostrophe
         let t = el.replace("'", "''");
 
         if (isTextAllNumeric)
         {
-            joinedText += t;
+            return t;
         }
         else
         {
-            joinedText += `'${t}'`;
+            return `'${t}'`;
         }
-
-        if(!(index === arr.length - 1))
-        {
-            joinedText += ",";
-            joinedText += "\n";
-        }
-    });
-
-    return joinedText;
+    }).join(',\n');
 }
